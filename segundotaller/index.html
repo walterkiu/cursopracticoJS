@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculando descuentos en precios</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de porcentajes y descuentos</h1>
+        <p>Segundo taller del curso practico de JavaScript</p>
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <h1>Calculadora de porcentajes</h1>
+                <label for="inputPrecio">Introduce el precio original</label>
+                <input type="number" id="inputPrecio">
+                <label for="inputDescuento">Introduce el porcentaje de descuento</label>
+                <input type="number" id="inputDescuento">
+                <button type="button" onclick="calcPrecioFinal()">Calcular</button>
+                <p id="calcResult"></p>
+            </form>
+        </section>
+        <section>
+            <form action="">
+                <h1>Calculadora de descuentos con cupones</h1>
+                <label for="inputPrecio2">Introduce el precio original</label>
+                <input type="number" id="inputPrecio2">
+                <label for="selectCupon">Introduce el cupon de descuento</label>
+                <select name="" id="selectCupon">
+                    <option value="cupon1">Cupon 1</option>
+                    <option value="cupon2">Cupon 2</option>
+                    <option value="cupon3">Cupon 3</option>
+                    <option value="cupon4">Cupon 4</option>
+                </select>
+                <button type="button" onclick="calcPrecioFinal2()">Calcular</button>
+                <p id="cuponResult"></p>
+            </form>
+        </section>
+    </main>
+    <script src="./basic.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis salarial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Calculadora de interés simple y compuesto</h1>
+    </header>
+    <main>
+        <section class="formIntereses">
+            <form action="" >
+                <h3>Calculadora de intereses</h3>
+                <label for="inputDinero">¿Cual es la cantidad de dinero? $</label>
+                <input type="number" id="inputDinero">
+                <label for="inputPorcentaje">¿Cual es la cantidad de interes? %</label>
+                <input type="number" id="inputPorcentaje">
+                <label for="inputAño">¿Por cuántos años?</label>
+                <input type="number" id="inputAño">
+                <select name="" id="selectInteres">
+                    <option value="simple">Interés simple</option>
+                    <option value="compuesto">Interés compuesto</option>
+                </select>
+                <button class="botonIntereses" type="button" onclick="onclickCalcularInteres()">Calcular</button>
+                <p class="pIntereses" id="pResult"></p>
+            </form>
+        </section>
+    </main>
+    <script src="./objetos.js"></script>
+    <script src="./basic.js"></script>
+</body>
+</html>
