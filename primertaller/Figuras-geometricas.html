@@ -12,28 +12,42 @@
 </head>
 <body>
     <header>
-        <h1>Calculando Figuras Geometricas</h1>
-        <p>Primer proyecto del Curso Practico de Java Script</p>
+        <h1>Calculadora de figuras geométricas</h1>
+        <p>Primer proyecto del Curso Práctico de JavaScript</p>
     </header>
     <main>
         <section class="section-calculadora">
             <div class="div-cuadrado">
-                <h3>Calculadora cuadrado</h3>
+                <h3>Cuadrado</h3>
                 <form action="">
-                    <label for="InputCuadrado">Escribe los lados de tu cuadrado</label>
+                    <label for="InputCuadrado">Escribe un lado del cuadrado</label>
                     <input id="InputCuadrado" type="number">
                     <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perímetro</button>
                     <button type="button" onclick="calcularAreaCuadrado()">Calcular Área</button>
                     <p id="squareResult"></p>
                 </form>
             </div>
-            <div class="div-triangulo">
-                <h3>Calculadora triangulo isosceles</h3>
+
+            <div class="div-rectangulo">
+                <h3>Rectángulo</h3>
                 <form action="">
-                    <label for="InputTrianguloLado">Escribe un lado del triangulo</label>
+                    <label for="inputRectanguloAltura">Escribe la altura del rectángulo</label>
+                    <input id="inputRectanguloAltura" type="number">
+                    <label for="inputRectanguloBase">Escribe la base del rectángulo</label>
+                    <input id="inputRectanguloBase" type="number">
+                    <button type="button" onclick="calcularPerimetroRectangulo()">Calcular Perímetro</button>
+                    <button type="button" onclick="calcularAreaRectangulo()">Calcular Área</button>
+                    <p id="rectangleResult"></p>
+                </form>
+            </div>
+
+            <div class="div-triangulo">
+                <h3>Triángulo isósceles</h3>
+                <form action="">
+                    <label for="InputTrianguloLado">Escribe un lado del triángulo</label>
                     <input id="InputTrianguloLado" type="number">
 
-                    <label for="InputTrianguloBase">Escribe la base del triangulo</label>
+                    <label for="InputTrianguloBase">Escribe la base del triángulo</label>
                     <input id="InputTrianguloBase" type="number">
 
                     <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perímetro</button>
@@ -43,9 +57,9 @@
                 </form>
             </div>
             <div class="div-circulo">
-                <h3>Calculadora circulo</h3>
+                <h3>Círculo</h3>
                 <form action="">
-                    <label for="InputCirculo">Escribe el radio de tu circulo</label>
+                    <label for="InputCirculo">Escribe el radio del círculo</label>
                     <input id="InputCirculo" type="number">
                     <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perímetro</button>
                     <button type="button" onclick="calcularAreaCirculo()">Calcular Área</button>

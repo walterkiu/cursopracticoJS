@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis salarial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Calculadora de análisis salarial</h1>
+        <p>Cuarto proyecto del Curso Práctico de JavaScript</p>
+    </header>
+    <main>
+        <section class="formIntereses">
+            <form action="" >
+                <h3>Interés simple y compuesto</h3>
+                <label for="inputDinero">¿Cual es la cantidad de dinero? $</label>
+                <input type="number" id="inputDinero">
+                <label for="inputPorcentaje">¿Cual es la cantidad de interes? %</label>
+                <input type="number" id="inputPorcentaje">
+                <label for="inputAño">¿Por cuántos años?</label>
+                <input type="number" id="inputAño">
+                <select name="" id="selectInteres">
+                    <option value="simple">Interés simple</option>
+                    <option value="compuesto">Interés compuesto</option>
+                </select>
+                <button class="botonIntereses" type="button" onclick="onclickCalcularInteres()">Calcular</button>
+                <p class="pIntereses" id="resultInteres"></p>
+            </form>
+        </section>
+
+        <section class="formDeudas">
+            <form action="" >
+                <h3>Capacidad de endeudamiento</h3>
+                <label for="ingreso">Ingresos mensuales</label>
+                <input type="number" id="ingreso">
+                <label for="alquiler">Gastos por alquiler</label>
+                <input type="number" id="alquiler">
+                <label for="comida">Gastos en comida</label>
+                <input type="number" id="comida">
+                <label for="luz">Factura de Luz</label>
+                <input type="number" id="luz">
+                <label for="agua">Factura de agua</label>
+                <input type="number" id="agua">
+                <label for="otros">Otros gastos</label>
+                <input type="number" id="otros">
+                
+                <button class="botonIntereses" type="button" onclick="onclickCalcularDeudas()">Calcular</button>
+                <p class="pDeudas" id="resultDeudas"></p>
+            </form>
+        </section>
+        <section class="formSalarios">
+            <form action="" >
+                <h3>Mediana de salarios</h3>
+                <div class="div-addnumber">
+                    <label for="agregarSalario">Ingresa un salario</label>
+                    <input type="number" id="agregarSalario">
+                    <button type="button" onclick="addSalary()">Agregar salario</button>
+                    <p id="validarNumero"></p>
+                </div>
+
+                <div class="div-deletenumber">
+                    <label for="eliminarSalario">Ingresa la posición del salario que quieres eliminar</label>
+                    <input type="number" id="eliminarSalario">
+                    <button type="button" onclick="deleteSalary()">Eliminar salario</button>
+                    <p id="validarPosicion"></p>
+                </div>
+                <div class="div-lista">
+                    <p id="listaSalarios"></p>
+                    <button type="button" onclick="deleteList()">Eliminar lista</button>
+                </div>
+                <div class="div-submit-salary">
+                    <button class="botonSalarios" type="button" onclick="onclickCalcularMediana()">Calcular</button>
+                    <p class="pSalarios" id="resultSalarios"></p>
+                </div>
+            </form>
+        </section>
+
+    </main>
+    <script src="./basic.js"></script>
+</body>
+</html>

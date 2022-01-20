@@ -29,12 +29,25 @@ function areaCirculo(radio, PI){
     return area;
 }
 
+function perimetroRectangulo(base, altura){
+    let perimetro = (base * 2) + (altura * 2);
+    return perimetro;
+}
+function areaRectangulo(base, altura){
+    let area = base * altura;
+    return area
+}
+function perimetroRectangulo (base, altura){
+    let perimetro = (base * 2) + (altura * 2);
+    return perimetro;
+}
+
 function calcularPerimetroCuadrado(){
     var input = document.getElementById("InputCuadrado");
     var value = input.value;
     var perimetro = perimetroCuadrado(value);
     const Result = document.getElementById("squareResult");
-    Result.innerText = "El perimetro del cuadrado es de " + perimetro;
+    Result.innerText = "El perímetro del cuadrado es de " + perimetro;
 }
 function calcularAreaCuadrado(){
     var input = document.getElementById("InputCuadrado");
@@ -51,7 +64,7 @@ function calcularPerimetroTriangulo(){
 
     const perimetro = perimetroTriangulo(inputLado, inputLado, inputBase)
     const Result = document.getElementById("triangleResult");
-    Result.innerText = "El perimetro del triangulo es de " + perimetro;
+    Result.innerText = "El perímetro del triángulo es de " + perimetro;
 }
 function calcularAreaTriangulo(){
     const input2 = document.getElementById("InputTrianguloBase");
@@ -61,7 +74,7 @@ function calcularAreaTriangulo(){
     const altura = alturaTriangulo(inputLado, inputBase);
     const area = areaTriangulo (inputBase, altura)
     const Result = document.getElementById("triangleResult");
-    Result.innerText = "El area del triangulo es de " + area.toFixed(2);
+    Result.innerText = "El area del triángulo es de " + area.toFixed(2);
 }
 function calcularAlturaTriangulo(){
     const input2 = document.getElementById("InputTrianguloBase");
@@ -70,14 +83,14 @@ function calcularAlturaTriangulo(){
     const inputLado = Number(input.value);
     const altura = alturaTriangulo(inputLado, inputBase);
     const Result = document.getElementById("triangleResult") 
-    Result.innerText = "La altura del triangulo es de " + altura.toFixed(2);
+    Result.innerText = "La altura del triángulo es de " + altura.toFixed(2);
 }
 function calcularPerimetroCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
     const perimetro = perimetroCirculo(value, PI);
     const Result = document.getElementById("circleResult") 
-    Result.innerText = "El perimetro del circulo es de " + perimetro.toFixed(2);
+    Result.innerText = "El perímetro del círculo es de " + perimetro.toFixed(2);
 }
 function calcularAreaCirculo(){
     const input = document.getElementById("InputCirculo");
@@ -85,5 +98,25 @@ function calcularAreaCirculo(){
     const area = areaCirculo(value, PI);
     
     const Result = document.getElementById("circleResult") 
-    Result.innerText = "El area del circulo es de " + area.toFixed(2);
+    Result.innerText = "El area del círculo es de " + area.toFixed(2);
+}
+function calcularPerimetroRectangulo(){
+    let inputAltura = document.getElementById("inputRectanguloAltura")
+    let altura = inputAltura.value;
+    let inputBase = document.getElementById("inputRectanguloBase");
+    let base = inputBase.value;
+
+    let perimetro = perimetroRectangulo(altura, base);
+    let pResult = document.getElementById("rectangleResult");
+    pResult.innerText = "El perímetro del rectángulo es de " + perimetro
+}
+function calcularAreaRectangulo(){
+    let inputBase = document.getElementById("inputRectanguloBase");
+    let base = inputBase.value;
+    let inputAltura = document.getElementById("inputRectanguloAltura");
+    let altura = inputAltura.value;
+    
+    let area = areaRectangulo(base, altura);
+    let pResult = document.getElementById("rectangleResult");
+    pResult.innerText = "El área del rectángulo es de " + area;
 }

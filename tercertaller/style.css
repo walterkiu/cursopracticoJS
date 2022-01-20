@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --azul-oscuro: rgb(21, 50, 78);
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+header{
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+main{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+.card-calculadora{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+form{
+    padding: 20px;
+    margin: 20px;
+    min-height: 530px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: rgb(200, 220, 255);
+    color: black;
+}
+input{
+    margin-block: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(194, 194, 194);
+    font-weight: bold;
+}
+input:focus{
+    box-shadow: 0 0 5px 1px rgb(126, 124, 124);
+    outline: none;
+    border: 1px solid rgba(182, 182, 182, 0);
+}
+button{
+    padding-block: 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 2px;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
+h2{
+    grid-column: span 2;
+    background-color: var(--azul-oscuro);
+    border-radius: 5px;
+    color:white;
+    width: 100%;
+    padding:10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.div-addnumber, .div-deletenumber{
+    display: flex;
+    flex-direction: column;
+    grid-column: span 1;
+    width: 90%;
+    text-align: center;
+}
+
+.div-submit-number button{
+    min-width: 180px;
+    border: 2px solid var(--azul-oscuro);
+}
+.div-submit-number button:hover{
+    box-shadow: 0 0 5px 0.5px var(--azul-oscuro);
+    transform: scale(1.02);
+}
+.div-lista{
+    grid-column: span 2;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.div-lista button{
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#listaNumeros{
+    height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+    border-radius: 4px;
+    font-weight: bold;
+}
+#validarNumero, #validarPosicion{
+    height: 20px;
+    text-align: center; 
+    padding-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+#mediaResult, #medianaResult, #modaResult{
+    min-height: 35px;
+    padding-block: 8px;
+    text-align: center;
+}
+
+.div-lista button, .div-addnumber button, .div-deletenumber button{
+    background-color: var(--azul-oscuro);
+    color: white;
+}
+
+.div-submit-number{
+    grid-column: span 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div-submit-number button{
+    max-width: 300px;
+    margin-bottom: 10px;
+
+}

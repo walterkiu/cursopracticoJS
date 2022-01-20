@@ -1,0 +1,29 @@
+.cards{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tarjeta1 tarjeta2" "tarjeta3 tarjeta4";
+    grid-gap: 40px; 
+}
+main{
+    padding-top:20px;
+}
+.sections{
+    max-width: 600px;
+    height: 300px;
+    padding: 40px;
+    margin-top: 0;
+    box-shadow: none;;
+    justify-content: center;
+}
+
+.sections:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 1px rgb(0, 34, 5);
+}
+
+
+.section-1, .section-2{
+    margin-top: 20px;
+}
+.section-3, .section-4{
+    margin-bottom: 20px;
+}

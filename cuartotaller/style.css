@@ -6,6 +6,10 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+:root{
+    --lila: rgb(237, 235, 255);
+    --lila-oscuro: rgb(13, 46, 85);
+}
 header{
     background-color: rgb(13, 46, 85);
     padding: 20px;
@@ -15,18 +19,26 @@ header{
 main{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-.formIntereses{
+
+.formIntereses, .formDeudas{
     width: 400px;
     padding: 10px;
     margin: 20px 15px;
-    background-color: rgb(237, 235, 255);
+    background-color: var(--lila);
     border-radius: 10px;
     min-height: 458px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.formIntereses h3{
+.formDeudas{
+    min-height: 625px;
+}
+form h3{
     padding: 10px;
-    background-color: rgb(27, 38, 61);
+    background-color: var(--lila-oscuro);
     color: white;
     width: 90%;
     border-radius: 5px;
@@ -38,7 +50,6 @@ form{
     flex-direction: column;
     align-items: center;
     text-align: center;
-
 }
 input{
     margin-block: 10px;
@@ -57,7 +68,7 @@ button{
     width: 80%;
     padding: 10px;
     margin: 10px 0;
-    background-color: rgb(27, 38, 61);
+    background-color: var(--lila-oscuro);
     color: white;
     font-weight: bold;
     border-radius: 4px;
@@ -73,7 +84,85 @@ select{
     border: 1px solid rgb(194, 194, 194); 
     text-align: center;
 }
-.pIntereses{
+.pIntereses, .pDeudas{
     margin: 10px 0;
     font-weight: bold;
+}
+.formSalarios form{
+    padding: 20px;
+    margin: 20px;
+    min-height: 530px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: var(--lila);
+    color: black;
+}
+.formSalarios form h3{
+    grid-column: span 2;
+    background-color: var(--lila-oscuro);
+    border-radius: 5px;
+    color:white;
+    width: 100%;
+    padding:10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.div-addnumber, .div-deletenumber{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 1;
+    width: 90%;
+    text-align: center;
+}
+
+.div-submit-number button{
+    min-width: 180px;
+    border: 2px solid var(--lila-oscuro);
+}
+.div-submit-number button:hover{
+    box-shadow: 0 0 5px 0.5px var(--lila-oscuro);
+    transform: scale(1.02);
+}
+.div-lista{
+    grid-column: span 2;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.div-lista button{
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#listaSalarios{
+    height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+    border-radius: 4px;
+    font-weight: bold;
+}
+#validarNumero, #validarPosicion{
+    height: 20px;
+    text-align: center; 
+    padding-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+.div-submit-salary{
+    grid-column: span 2;
+    width: 100%;
+}
+.div-submit-salary button{
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+.pSalarios{
+    min-height: 21px;
+    padding: 10px;
 }
